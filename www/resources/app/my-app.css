@@ -457,7 +457,7 @@ html:not(.watch-active-state) .button.btn_login.button-fill:active{
 	}
 		.logo img{
 			width: 100%;
-			max-width: 391px;
+			max-width: 520px;
 		}
 
 		.login-screen-content .login_list{
@@ -1529,7 +1529,9 @@ label.label-checkbox i.icon-form-checkbox{
 
 .qt-logo{
 	width: 100%;
-	padding-top: 60px;
+	/*padding-top: 60px;*/
+	position: absolute;
+	bottom: 20px;
 }
 
 .qt-logo .qt-powered-text{
@@ -1540,11 +1542,15 @@ label.label-checkbox i.icon-form-checkbox{
 }
 
 .qt-logo .qt-logo-img img{
-	max-width: 390px;
+	max-width: 416px;
 	width: 100%;
 }
 
 .qt-logo .qt-logo-img {
 	padding: 0 90px;
 	text-align: center;
+}
+
+.focus-state .label {
+	color: #002270 !important;
 }
