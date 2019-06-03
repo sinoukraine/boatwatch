@@ -100,7 +100,7 @@ window.LanguagePackages= {
 		"MENU_MSG08": "Website",
 		"MENU_MSG09": "Cell",
 		"MENU_MSG10": "Office",
-		"MENU_MSG11": "Boatwatch – Open 24/7",
+		"MENU_MSG11": "BoatWatch – Open 24/7",
 		"MENU_MSG12": "User Guide",
 
 		"PROFILE_MSG00": "USER",

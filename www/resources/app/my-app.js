@@ -53,6 +53,9 @@ if( navigator.userAgent.match(/Windows/i) ){
 document.addEventListener("deviceready", onDeviceReady, false ); 
 
 function onDeviceReady(){ 
+    if (cordova && cordova.InAppBrowser) {
+        window.open = cordova.InAppBrowser.open;
+    }
     //fix app images and text size
     if (window.MobileAccessibility) {
         window.MobileAccessibility.usePreferredTextZoom(false);    
@@ -300,7 +303,8 @@ API_URL.URL_GET_GEOFENCE_ASSET_LIST = API_DOMIAN1 + "Device/GetFenceAssetList";
 API_URL.URL_PHOTO_UPLOAD = "http://upload.quiktrak.co/image/Upload";
 API_URL.URL_SUPPORT = "http://support.quiktrak.eu/?name={0}&loginName={1}&email={2}&phone={3}&s={4}";
 
-API_URL.URL_ROUTE = "https://www.google.com/maps/dir/?api=1&destination={0},{1}"; //&travelmode=walking
+//API_URL.URL_ROUTE = "https://www.google.com/maps/dir/?api=1&destination={0},{1}"; //&travelmode=walking
+API_URL.URL_ROUTE = "maps://maps.apple.com/maps?daddr={0},{1}"; // ios link
 API_URL.URL_REFRESH_TOKEN = API_DOMIAN1 + "User/RefreshToken";
 
 var cameraButtons = [
@@ -520,11 +524,12 @@ $$('body').on('click', 'a.external', function(event) {
     event.preventDefault();
     var href = this.getAttribute('href');
     if (href) {
-        if (typeof navigator !== "undefined" && navigator.app) {                
+        /*if (typeof navigator !== "undefined" && navigator.app) {                
             navigator.app.loadUrl(href, {openExternal: true}); 
         } else {
             window.open(href,'_blank');
-        }
+        }*/
+        window.open(encodeURI(href), '_blank', 'location=yes');
     }
     return false;
 });
@@ -2662,11 +2667,13 @@ function loadPageSupport(){
   
     var href = API_URL.URL_SUPPORT.format(param.name,param.loginName,param.email,param.phone,param.service); 
     
-    if (typeof navigator !== "undefined" && navigator.app) {                
+    /*if (typeof navigator !== "undefined" && navigator.app) {                
         navigator.app.loadUrl(href, {openExternal: true}); 
     } else {
         window.open(href,'_blank');
-    }
+    }*/
+
+    window.open(href, '_blank', 'location=yes');
 }
 
 function loadResetPwdPage(){
@@ -5032,11 +5039,12 @@ function showCustomMessage(params){
 
 function showUserGuide(){
     var href = 'https://quiktrakglobal.com/pdf/bw-app.pdf';
-    if (typeof navigator !== "undefined" && navigator.app) {                
+    /*if (typeof navigator !== "undefined" && navigator.app) {                
         navigator.app.loadUrl(href, {openExternal: true}); 
     } else {
         window.open(href,'_blank');
-    }
+    }*/
+    window.open(href, '_blank', 'location=yes');
 }
 
 

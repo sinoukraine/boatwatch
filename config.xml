@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget 
   version="1.2.6"
-  android-versionCode="49" 
-  ios-CFBundleVersion="49" 
+  android-versionCode="50" 
+  ios-CFBundleVersion="50" 
   id="com.quiktrak.boatwatch" 
   xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" >
     <name>BoatWatch</name>
@@ -59,8 +59,8 @@
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="5.0.2" />
     <plugin name="cordova-plugin-camera" source="npm" spec="4.0.3"  />
     <plugin spec="https://github.com/phonegap/phonegap-mobile-accessibility.git" source="git" />
-<!--     <plugin name="cordova-android-support-gradle-release" source="npm" /> -->
-<!--     <plugin name="cordova-android-firebase-gradle-release" source="npm" /> -->
+     <plugin name="cordova-plugin-inappbrowser" source="npm" spec="3.0.0"  />
+
     
 
     <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">

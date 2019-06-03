@@ -183,7 +183,9 @@ html:not(.watch-active-state) .button.btn_login.button-fill:active{
 .align-items-center{
 	    align-items: center;
 }
-
+.fs-15{
+	font-size: 15px !important;
+}
 .svg_menu{
 	width: 32px;
 }
