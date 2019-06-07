@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget 
   version="1.2.6"
-  android-versionCode="50" 
-  ios-CFBundleVersion="50" 
+  android-versionCode="51" 
+  ios-CFBundleVersion="51" 
   id="com.quiktrak.boatwatch" 
   xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" >
     <name>BoatWatch</name>
